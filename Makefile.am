@@ -41,8 +41,8 @@ minerd_SOURCES += cryptonight_aesni.c
 endif
 
 minerd_LDFLAGS	= $(AM_LDFLAGS)
-minerd_LDADD	= @LIBCURL@ @JANSSON_LIBS@ @PTHREAD_LIBS@ @WS2_LIBS@
-minerd_CPPFLAGS = $(AM_CPPFLAGS) @LIBCURL_CPPFLAGS@
+minerd_LDADD	= -lcurl @JANSSON_LIBS@ @PTHREAD_LIBS@ @WS2_LIBS@
+minerd_CPPFLAGS = $(AM_CPPFLAGS)
 minerd_CFLAGS   = $(AM_CFLAGS)
 
 if HAVE_WINDOWS
